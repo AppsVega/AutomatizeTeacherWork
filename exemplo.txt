@@ -1,0 +1,10 @@
+#python -m venv venv
+#.\venv\Scripts\activate
+
+#CPF = "01235321673"
+#SENHA = "Bebela02."
+#DESC = "TEXT2"
+#PONTOS = "5"
+#ALUNOSQNT = 33
+#WORKBOOK = "D:\VSprojects\Works\AutomatizeTeacherWork\_1º ano 10 Nivelamento.xlsx"
+#PAGINA = "Página1"
