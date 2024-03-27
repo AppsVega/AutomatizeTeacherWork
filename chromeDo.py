@@ -3,8 +3,11 @@ from selenium.webdriver.common.by import By
 import openpyxl
 from time import sleep
 
-def really_do(CPF,SENHA,DESC,PONTOS,ALUNOSQNT,WORKBOOK,PAGINA):
+def really_do(CPF,SENHA,DESC,PONTOS,ALUNOSQNT,TURMA,WORKBOOK,PAGINA):
     NOTALIST = []
+
+    if TURMA == ""
+    
     wb = openpyxl.load_workbook(filename= WORKBOOK, data_only=True, keep_vba=True)
     sheet = wb[PAGINA]
 
