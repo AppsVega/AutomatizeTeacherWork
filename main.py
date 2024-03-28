@@ -1,4 +1,5 @@
 import customtkinter
+from threading import Thread
 from chromeDo import really_do
 
 janela = customtkinter.CTk()
@@ -18,7 +19,8 @@ def obter_valores_e_executar(choice):
     WORKBOOK = workbook1.get()
     PAGINA = pagina1.get()
 
-    really_do(CPF, SENHA, DESC, PONTOS, ALUNOSQNT, TURMA, WORKBOOK, PAGINA)
+    t = Thread(target=really_do, args=(CPF, SENHA, DESC, PONTOS, ALUNOSQNT, TURMA, WORKBOOK, PAGINA))
+    t.start()
 
 texto1 = customtkinter.CTkLabel(janela, text="Lembre que caso os dados preenchidos não estiverem\n corretos o programa pode não funcionar!", font=("Arial", 20, "bold"))
 cpf1 = customtkinter.CTkEntry(janela, placeholder_text="Digite aqui seu cpf: ", width=300)
