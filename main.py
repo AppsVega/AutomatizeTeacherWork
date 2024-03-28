@@ -26,14 +26,9 @@ senha1 = customtkinter.CTkEntry(janela, placeholder_text="Digite aqui sua senha:
 desc1 = customtkinter.CTkEntry(janela, placeholder_text="Digite aqui o nome da avaliação: ", width=300)
 pontos1 = customtkinter.CTkEntry(janela, placeholder_text="Digite aqui a quantidade de pontos: ", width=300)
 alunosqnt1 = customtkinter.CTkEntry(janela, placeholder_text="Digite aqui a quantidade de Alunos: ", width=300)
-
 options1 = customtkinter.CTkOptionMenu(janela, values=listaT, command=obter_valores_e_executar, width=300)
-
-options1 = customtkinter.CTkOptionMenu(janela, values=["OPT1","OPT2","OPT3","OPT4","OPT5","OPT6"], command=obter_valores_e_executar, width=600)
-
 workbook1 = customtkinter.CTkEntry(janela, placeholder_text="Digite aqui o caminho do arquivo XLSX: ", width=300)
 pagina1 = customtkinter.CTkEntry(janela, placeholder_text="Digite aqui o nome da Página do arquivo XLSX: ", width=300)
-start1 = customtkinter.CTkButton(janela, text="COMEÇAR", command=obter_valores_e_executar, width=600)
 
 texto1.pack(padx=10,pady=10)
 cpf1.pack(padx=10,pady=10)
@@ -44,7 +39,6 @@ alunosqnt1.pack(padx=10,pady=10)
 workbook1.pack(padx=10,pady=10)
 pagina1.pack(padx=10,pady=10)
 options1.pack(padx=10,pady=10)
-start1.pack(padx=10,pady=10)
 options1.pack(padx=10,pady=10)
 
 janela.mainloop()

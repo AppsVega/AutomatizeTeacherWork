@@ -20,25 +20,7 @@ def really_do(CPF,SENHA,DESC,PONTOS,ALUNOSQNT,TURMA,WORKBOOK,PAGINA):
         turma_xpath = "/html/body/div/div/div/div/div/main/div/div/div[3]/div/div[6]"
     elif TURMA == lista[6]:
         turma_xpath = "/html/body/div/div/div/div/div/main/div/div/div[3]/div/div[7]"
-    else:
-        print("DEU RUIM WTF")
-    print(turma_xpath)
 
-def really_do(CPF,SENHA,DESC,PONTOS,ALUNOSQNT,TURMA,WORKBOOK,PAGINA):
-    NOTALIST = []
-    turma_xpath = ""
-    if TURMA == "OPT1":
-        turma_xpath = ""
-    elif TURMA == "OPT2":
-        turma_xpath = ""
-    elif TURMA == "OPT3":
-        turma_xpath = ""
-    elif TURMA == "OPT4":
-        turma_xpath = ""
-    elif TURMA == "OPT5":
-        turma_xpath = ""
-    elif TURMA == "OPT6":
-        turma_xpath = ""
     wb = openpyxl.load_workbook(filename= WORKBOOK, data_only=True, keep_vba=True)
     sheet = wb[PAGINA]
 
@@ -102,7 +84,7 @@ def really_do(CPF,SENHA,DESC,PONTOS,ALUNOSQNT,TURMA,WORKBOOK,PAGINA):
     for i, val in zip(elements, range(0, int(ALUNOSQNT))):
         i.send_keys(NOTALIST[val])
 
-    sleep(5)
+    sleep(3)
 
     salv2_button = driver.find_element(By.XPATH, '/html/body/div[1]/div/div/div/div/main/div/div/template/button')
     salv2_button.click()
