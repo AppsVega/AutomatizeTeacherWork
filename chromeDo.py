@@ -23,6 +23,22 @@ def really_do(CPF,SENHA,DESC,PONTOS,ALUNOSQNT,TURMA,WORKBOOK,PAGINA):
     else:
         print("DEU RUIM WTF")
     print(turma_xpath)
+
+def really_do(CPF,SENHA,DESC,PONTOS,ALUNOSQNT,TURMA,WORKBOOK,PAGINA):
+    NOTALIST = []
+    turma_xpath = ""
+    if TURMA == "OPT1":
+        turma_xpath = ""
+    elif TURMA == "OPT2":
+        turma_xpath = ""
+    elif TURMA == "OPT3":
+        turma_xpath = ""
+    elif TURMA == "OPT4":
+        turma_xpath = ""
+    elif TURMA == "OPT5":
+        turma_xpath = ""
+    elif TURMA == "OPT6":
+        turma_xpath = ""
     wb = openpyxl.load_workbook(filename= WORKBOOK, data_only=True, keep_vba=True)
     sheet = wb[PAGINA]
 
