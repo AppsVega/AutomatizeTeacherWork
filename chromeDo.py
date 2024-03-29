@@ -2,7 +2,7 @@ from undetected_chromedriver import Chrome, ChromeOptions
 from selenium.webdriver.common.by import By
 import openpyxl
 from time import sleep
-def really_do(CPF,SENHA,DESC,PONTOS,ALUNOSQNT,TURMA,WORKBOOK,PAGINA):
+def really_do(CPF,SENHA,DESC,PONTOS,ALUNOSQNT,TURMA,WORKBOOK):
     NOTALIST = []
     lista = ["1° DESENVOLVIMENTO DE SITEMAS-NIVELAMENTO","1° DESENVOLVIMENTO DE SITEMAS-MATEMÁTICA","1° EM INT 1-NIVELAMENTO","1° EM INT 1-MATEMÁTICA","2° EM INT 1-NIVELAMENTO","3° EM INT 1-NIVELAMENTO","3° EM INT 1-MATEMÁTICA"]
     turma_xpath = ""
@@ -22,7 +22,7 @@ def really_do(CPF,SENHA,DESC,PONTOS,ALUNOSQNT,TURMA,WORKBOOK,PAGINA):
         turma_xpath = "/html/body/div/div/div/div/div/main/div/div/div[3]/div/div[7]"
 
     wb = openpyxl.load_workbook(filename= WORKBOOK, data_only=True, keep_vba=True)
-    sheet = wb[PAGINA]
+    sheet = wb.active
 
     options = ChromeOptions()
     options.add_argument("--no-sandbox")
